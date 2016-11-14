@@ -9,8 +9,23 @@
 # constructor accordingly.
 
 class Yodel
+  attr_accessor :segment, :count 
 
-end
+  def initialize(input)
+    @segment = input[:segment]
+    @count = input[:count]
+  end
+
+  def articulate 
+    new_string = ""
+
+    @count.times do 
+      new_string << @segment 
+    end 
+    return new_string 
+  end
+end 
+ 
 
 
 # Driver code - don't touch anything below this line.
@@ -56,3 +71,5 @@ if result == 'Oh-di-lay-ee-ayOh-di-lay-ee-ayOh-di-lay-ee-ayOh-di-lay-ee-ay'
 else
   puts "F"
 end
+
+
